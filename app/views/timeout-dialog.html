@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+{% from "hmrc-timeout-dialog/macro.njk"  import hmrcTimeoutDialog %}
+
+{% block content %}
+{{ hmrcPageHeading({
+text: "What is your name?"
+}) }}
+{{ hmrcTimeoutDialog({
+  timeout: 122,
+  countdown: 120,
+  keepAliveUrl: '/keep-alive',
+  signOutUrl: '/sign-out'
+}) }}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% from "hmrc-page-heading/macro.njk"  import hmrcPageHeading %}
+
+{% block content %}
+{{ hmrcPageHeading({
+text: "You have been signed out"
+}) }}
+{% endblock %}
